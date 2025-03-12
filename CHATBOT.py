@@ -36,8 +36,8 @@ def chatbot(input_text):
     tag = clf.predict(input_text)[0]
     for intent in intents:
         if intent['tag'] == tag:
-            response = random.choice(intent['responses'])
-            return response
+            return random.choice(intent['responses'])
+            return "I'm sorry,I didn't understand that.Can you rephrase?"
 
 counter = 0
 
